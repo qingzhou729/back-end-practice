@@ -1,0 +1,41 @@
+#cookieTEST 赋值给$proxy_node
+map $cookie_TEST $proxy_node {
+    default "";
+    "1"     "1";
+    "2"     "2";
+}
+
+server {
+    listen       8080;
+    server_name  test.yuxue.com;
+
+    location  / {
+        root /test/static;
+        if ($proxy_node = "1") {
+            set $from 8081;
+            proxy_pass http://47.107.188.55:8081;
+        }
+        if ($proxy_node = "2") {
+            set $from 8082;
+            proxy_pass http://47.107.188.55:8082;
+        }
+
+        proxy_set_header SERVER_FROM $from;
+        index index3.html;
+    }
+
+    # 匹配静态资源
+    location /static2 {
+        # 静态资源防盗
+        valid_referers none blocked server_names 47.107.188.55  ~\test.yuxue.com\.;
+        if ($invalid_referer) {
+            return 403;
+        }
+        # 将static2 映射到 static
+        alias /test/static/;
+    }
+    # 指定访问文件格式
+    location ~* ^\.(html|css|js|jpg|png)$ {
+        alias /test/static/;
+    }
+}
