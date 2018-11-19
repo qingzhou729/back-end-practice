@@ -1,0 +1,14 @@
+p {
+    color: #ff4965;
+    font-size: 40px;
+    font-weight: 700;
+}
+div{
+    width: 100px;
+    height: 60px;
+    background: #ff4965;
+    margin-top: 40px;
+    text-align: center;
+    line-height: 60px;
+}
+
