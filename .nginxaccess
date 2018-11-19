@@ -10,7 +10,7 @@ server {
     server_name  test.yuxue.com;
 
     location  / {
-        root /test/static;
+        root /data/back-end-practice/static;
         if ($proxy_node = "1") {
             set $from 8081;
             proxy_pass http://47.107.188.55:8081;
@@ -32,10 +32,10 @@ server {
             return 403;
         }
         # 将static2 映射到 static
-        alias /test/static/;
+        alias /data/back-end-practice/static;
     }
     # 指定访问文件格式
     location ~* ^\.(html|css|js|jpg|png)$ {
-        alias /test/static/;
+        alias /data/back-end-practice/static;
     }
 }
