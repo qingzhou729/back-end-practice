@@ -13,7 +13,7 @@ const credentials = {key: privateKey, cert: certificate};
 const httpServer = http.createServer((req, res) => {
     let path = req.url;	
     if (path == "/") {
-	path = "/test/static/index2.html";
+	path = "/data/back-end-practice/static/index2.html";
     }
     const server_from = req.headers.server_from === undefined ? '' : req.headers.server_from;
     sendFile(res,path,server_from);

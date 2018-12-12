@@ -1,14 +1,74 @@
-p {
-    color: #ff4965;
-    font-size: 40px;
-    font-weight: 700;
+.goods {
+    margin-left: 50px;
 }
-div{
-    width: 100px;
-    height: 60px;
-    background: #ff4965;
-    margin-top: 40px;
-    text-align: center;
-    line-height: 60px;
+.rank-wrap {
+    width: 350px;
+    padding: 12px;
+    box-sizing: border-box;
+    border: 1px solid #eee;
+    margin: 20px 0 0 50px;
 }
 
+h4{
+    margin-left: 200px;
+    margin-top: 50px;
+}
+
+.item {
+    height: 60px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.item-index {
+    width: 24px;
+    height: 24px;
+    font-size: 16px;
+    border-radius: 50%;
+    line-height: 24px;
+    text-align: center;
+    color: #999;
+}
+
+.one{
+    background: rgb(254, 209, 86);
+    color: #ffffff;
+}
+
+.two{
+    background: rgb(198, 198, 198);
+    color: #ffffff;
+}
+
+.three {
+    background: rgb(224, 165, 117);
+    color: #ffffff;
+}
+
+.score{
+    font-size: 12px;
+    color: #999;
+    justify-content: right;
+    margin-left: 16px;
+}
+
+.left{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.name{
+    font-size: 14px;
+    color: #333;
+    margin-left: 16px;
+}
+
+.avatar {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    display: block;
+}

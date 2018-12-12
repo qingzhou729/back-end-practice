@@ -21,6 +21,7 @@ server {
         }
 
         proxy_set_header SERVER_FROM $from;
+
         index index3.html;
     }
 

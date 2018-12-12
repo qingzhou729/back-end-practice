@@ -1,0 +1,22 @@
+{
+  "name": "back-end-practice",
+  "version": "1.0.0",
+  "description": "后端学习",
+  "main": "back.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yukiyang0729/back-end-practice.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/yukiyang0729/back-end-practice/issues"
+  },
+  "homepage": "https://github.com/yukiyang0729/back-end-practice#readme",
+  "dependencies": {
+    "redis": "^2.8.0"
+  }
+}
